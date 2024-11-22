@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Daniel";
+    src: url("Fonts/daniel/Daniel-Regular.otf");
+}
+
+@font-face {
+    font-family: "amatic";
+    src: url("Fonts/amatic/AmaticSC-Regular.ttf");
+}
+
+body {
+    background-color: rgb(70, 122, 190);
+    width: 100%;
+}
+
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 10vh;
+    color: rgb(250, 250, 250);
+    text-align: center; 
+}
+
+.window-desktop {
+    width: 28rem;
+    height: 20rem;
+
+    padding-bottom: 2rem; 
+
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:center;
+
+    background-color: rgb(240, 240, 240);
+
+    border-style: dashed;
+    border-width: 0.2rem;
+    border-radius: 1rem;
+    border-color: rgb(25,113,194);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 13px 10px 33px -4px rgba(0,0,0,0.75);
+
+}
+
+.window-desktop .text {
+    position: relative;
+    bottom: 20%;
+    
+    margin: 1rem;
+    margin-top: 3rem;
+
+    font-family: "amatic";
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: rgb(60, 112, 180);
+}
+
+.window-desktop .char {
+    display: inherit;
+    height: 10rem;
+    position: relative;
+    left: 1.5rem;
+    top: 20%;
+    transform:translateY(-50%);
+
+    animation: rotate 2s infinite linear; 
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-8deg); 
+    }
+    50% {
+        transform: rotate(8deg);
+    }
+    100% {
+        transform: rotate(-8deg);
+    }
+}
+
+.window-desktop .proceed {
+    display: inherit;
+    color: rgb(240, 240, 240);
+
+    font-family: "amatic"; 
+    font-weight: bold;
+    font-size: 2.5rem;
+    width: 10rem;
+
+    background-color: rgb(70, 122, 190);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 100%);
+
+    transition: 0.5s width, 0.5s font-size;
+}
+
+.proceed:hover {
+    width: 11rem;
+    font-size: 2.8rem;
+}
+
+.window-mobile {
+    display: none;
+}
+
+/* This up there is just for the normal handling option -> PC (i will try my best to translate it to mobile, because
+ * i am not the "frontend master" kind of guy.*/
+
+@media only screen and (max-device-width: 480px) {
+    .window-desktop {
+        display: none;
+    }
+
+    h1 {
+        font-size: 5rem;
+        margin-top: 1rem;;
+    }
+
+    .window-mobile {
+        width: 90%;
+        height: 85%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items:center;
+        justify-content:center;
+
+        background-color: rgb(240, 240, 240);
+
+        border-style: dashed;
+        border-width: 0.2rem;
+        border-radius: 1rem;
+        border-color: rgb(25,113,194);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        box-shadow: 13px 10px 33px -4px rgba(0,0,0,0.75);
+
+    }
+    
+    .window-mobile .text {
+        border-width: 0.5rem;
+        border-style: dashed;
+
+        padding: 1rem;
+        margin: 2rem;
+        border-radius: 1rem;
+ 
+        font-size: 6rem;
+        font-family: amatic;       
+        font-weight: bold;
+        color: rgb(240, 240, 240);
+        
+        background-color: rgb(100, 152, 220)
+    }
+    
+    .img-cover {
+        overflow: hidden;
+        height: 28vh;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    .window-mobile .char {
+        height: 40vh;
+        position: relative;
+        left: 25%;
+        animation: rotate 1s infinite linear;
+    }
+    @keyframes rotate {
+        0% {
+            transform: rotate(-4deg); 
+        }
+        50% {
+            transform: rotate(4deg);
+        }
+        100% {
+            transform: rotate(-4deg);
+        }
+    }
+
+    .window-mobile .proceed {
+        width: 80vw;
+        height: 15rem;
+        border-radius: 2rem;
+        
+        color: rgb(240, 240, 240);
+
+        font-family: "amatic"; 
+        font-weight: bold;
+        font-size: 10rem;
+        
+        background-color: rgb(70, 122, 190);
+        padding: 0.5rem;
+        border-radius: 1rem;
+
+        box-shadow: 25px 25px 25px -3px rgba(0, 0, 0, 0.3);
+        position: relative;
+
+        transition: 0.5s width, 0.5s font-size;
+        animation: grow 2s infinite linear;
+    }
+    @keyframes grow {
+        0% {
+            width: 80vw;
+            height: 15rem;
+        }
+        50% {
+            width: 82vw;
+            height: 15.5rem;
+        }
+
+        100% {
+            width: 80vw;
+            height: 15rem;
+        }
+    }
+}
