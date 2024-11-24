@@ -1,0 +1,74 @@
+
+.desktop {
+    position:relative;
+    top: 35%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.mem-slots {
+    display: flex;
+    flex-direction: row;
+    
+    gap: 0.2rem;
+
+}
+
+.window-desktop {
+    position: relative;
+    left: 0;
+    top: 1rem;
+    transform: translate(0, 0);
+}
+
+.slot {
+    font-size: 2.2rem;
+    font-family: amatic;
+    font-weight: bold;  
+    color: rgb(60, 112, 180);
+    
+    line-height: 2rem;
+    background-color: rgb(240, 240, 240);
+
+    padding: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    border-radius: 0.5rem;
+}
+
+/* This up there is just for the normal handling option -> PC (i will try my best to translate it to mobile, because
+ * i am not the "frontend master" kind of guy.*/
+
+@media only screen and (max-device-width: 480px) {
+    .desktop {
+        display:none;
+    }
+    
+    .mem-slots {
+        padding: 1rem;
+        border-radius: 1rem;
+
+        background-color: rgb(60, 112, 180);
+        gap: 0.7rem;
+    }
+    
+    .window-mobile .char {
+        height: 30vh;
+    }
+
+    .window-mobile .img-cover {
+        height: 15vh
+    }
+
+    .slot {
+        line-height: 6rem;
+        font-size: 6rem;
+    }
+
+} 

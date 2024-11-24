@@ -144,6 +144,7 @@ h1 {
         justify-content:center;
 
         background-color: rgb(240, 240, 240);
+        padding-bottom: 1rem;
 
         border-style: dashed;
         border-width: 0.2rem;
@@ -153,7 +154,7 @@ h1 {
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -48%);
 
         box-shadow: 13px 10px 33px -4px rgba(0,0,0,0.75);
 
@@ -178,24 +179,23 @@ h1 {
     .img-cover {
         overflow: hidden;
         height: 28vh;
-        width: 100%;
         margin-top: 3rem;
     }
     .window-mobile .char {
         height: 40vh;
         position: relative;
-        left: 25%;
+        right: 5%;
         animation: rotate 1s infinite linear;
     }
     @keyframes rotate {
         0% {
-            transform: rotate(-4deg); 
+            transform: rotate(-2deg); 
         }
         50% {
-            transform: rotate(4deg);
+            transform: rotate(2deg);
         }
         100% {
-            transform: rotate(-4deg);
+            transform: rotate(-2deg);
         }
     }
 
