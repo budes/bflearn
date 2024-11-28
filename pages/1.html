@@ -10,21 +10,23 @@
         <div class="register-shown" style="height: 90vh">
             <div class="desktop">
                 <section class="mem-slots">
-                    <div class="slot" id="#1"> 0 </div>
-                    <div class="slot" id="#2"> 0 </div>
-                    <div class="slot" id="#3"> 0 </div>
-                    <div class="slot" id="#4"> 0 </div>
-                    <div class="slot" id="#5"> 0 </div>
-                    <div class="slot" id="#6"> 0 </div>
-                    <div class="slot" id="#7"> 0 </div>
-                    <div class="slot" id="#8"> 0 </div>
-                    <div class="slot" id="#9"> 0 </div>
+                    <div class="slot" id="1"> 0 </div>
+                    <div class="slot" id="2"> 0 </div>
+                    <div class="slot" id="3"> 0 </div>
+                    <div class="slot" id="4"> 0 </div>
+                    <div class="slot" id="5"> 0 </div>
+                    <div class="slot" id="6"> 0 </div>
+                    <div class="slot" id="7"> 0 </div>
+                    <div class="slot" id="8"> 0 </div>
+                    <div class="slot" id="9"> 0 </div>
                 </section>
 
                 <div class="window-desktop">
                     <img class="char" src="../Images/big brand@1,25x.svg">
-                    <div class="text">  In brainf*ck we have these slots, where the compiler gets and modify values from 
-                        <a> <button class="proceed" > ---> </button> </a>
+                    <div style="transform: translateY(5%); height: 100%; display: flex; flex-direction: column; justify-content: space-around;"> 
+                        <div class="text">  In brainf*ck we have these slots, where the compiler gets and modify values from </div>
+                        <textarea placeholder="try it"> </textarea>
+                        <a> <button class="proceed" onclick="changeText()"> ---> </button> </a>
                     </div>
                 </div>
             </div>
@@ -32,22 +34,22 @@
             <div class="mobile">
                 <div class="window-mobile">
                     <section class="mem-slots">
-                        <div class="slot" id="#1"> 0 </div>
-                        <div class="slot" id="#2"> 0 </div>
-                        <div class="slot" id="#3"> 0 </div>
-                        <div class="slot" id="#4"> 0 </div>
-                        <div class="slot" id="#5"> 0 </div>
-                        <div class="slot" id="#6"> 0 </div>
-                        <div class="slot" id="#7"> 0 </div>
-                        <div class="slot" id="#8"> 0 </div>
-                        <div class="slot" id="#9"> 0 </div>
+                        <div class="slot" id="1"> 0 </div>
+                        <div class="slot" id="2"> 0 </div>
+                        <div class="slot" id="3"> 0 </div>
+                        <div class="slot" id="4"> 0 </div>
+                        <div class="slot" id="5"> 0 </div>
+                        <div class="slot" id="6"> 0 </div>
+                        <div class="slot" id="7"> 0 </div>
+                        <div class="slot" id="8"> 0 </div>
+                        <div class="slot" id="9"> 0 </div>
                     </section>
                     <div class="text"> In brainf*ck we have these slots, where the compiler gets and modify values from 
                     </div>
                     <div class="img-cover"> 
                         <img view class="char" src="../Images/big brand@1,25x.svg">
                     </div>
-                    <button class="proceed"> ---> </button> 
+                    <button class="proceed" onclick="changeText()"> ---> </button> 
                 </div>
             </div>
 
@@ -55,8 +57,18 @@
             
         <script> 
         let moment = 0
-        let moments = ["In brainf*ck we have these slots, where the compiler gets and modify values from", 
-                   "You can increment or subtract from those values by typing + or -"]
+        let moments = ["You can increment or subtract from those values by typing + or -",]
+        
+        function changeText() {
+            if (moment == 0) {
+                document.getElementsByTagName("textarea")[0].style.display = "block"
+                document.getElementsByClassName("text")[0].innerText = moments[moment]
+                document.getElementsByClassName("text")[1].innerText = moments[moment]
+            }
+
+            moment ++
+        }
+
         </script>
     <!-- Do some bushes idk, it would be a cool touch after !-->
     </body>
